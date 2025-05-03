@@ -9,7 +9,7 @@ class User(models.Model):
 class Team(models.Model):
     _id = models.ObjectIdField()
     name = models.CharField(max_length=100)
-    members = models.JSONField()  # Use JSONField to store list of members
+    members = models.JSONField(default=list)  # Provide a default empty list for members
 
 class Activity(models.Model):
     _id = models.ObjectIdField()
